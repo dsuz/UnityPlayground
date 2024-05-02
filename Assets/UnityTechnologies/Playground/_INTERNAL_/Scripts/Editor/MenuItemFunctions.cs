@@ -15,7 +15,7 @@ public class MenuItemFunctions
 	}
 	*/
 
-	[MenuItem("Playground/Turn Playground Off")]
+	//[MenuItem("Playground/Turn Playground Off")]
 	public static void TurnOff ()
 	{
 		PlayerSettings.SetScriptingDefineSymbolsForGroup(BuildTargetGroup.Standalone, "");
@@ -23,7 +23,7 @@ public class MenuItemFunctions
 		Debug.Log("Turned Playground off");
 	}
 
-	[MenuItem("Playground/Turn Playground On")]
+	//[MenuItem("Playground/Turn Playground On")]
 	public static void TurnOn ()
 	{
 		PlayerSettings.SetScriptingDefineSymbolsForGroup(BuildTargetGroup.Standalone, "GAMEOBJECT_HEADER; DEFAULT_INSPECTORS; CUSTOM_INSPECTORS");
