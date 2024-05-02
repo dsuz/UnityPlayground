@@ -7,10 +7,12 @@ using UnityEditorInternal;
 [CustomEditor(typeof(Patrol))]
 public class PatrolInspector : InspectorBase
 {
-	private string explanation = "The object moves through a series of positions. This can be used for patrolling characters.";
-	private string emptyArrayWarning = "The list of waypoints is empty, so the GameObject will not move.";
+    //private string explanation = "The object moves through a series of positions. This can be used for patrolling characters.";
+    private string explanation = "Stop に指定した座標を順番に巡る。オブジェクトを巡回させることができる。";
+    //private string emptyArrayWarning = "The list of waypoints is empty, so the GameObject will not move.";
+    private string emptyArrayWarning = "Stops に座標が指定されていません。座標を指定しないと、オブジェクトは動きません。";
 
-	private ReorderableList list;
+    private ReorderableList list;
 	Patrol patrolScript;
 
 	string arrayDataString = "waypoints.Array.data[{0}]";

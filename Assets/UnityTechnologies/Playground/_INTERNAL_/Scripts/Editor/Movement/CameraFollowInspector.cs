@@ -6,9 +6,12 @@ using UnityEditor;
 [CustomEditor(typeof(CameraFollow))]
 public class CameraFollowInspector : InspectorBase
 {
-	private string explanation = "This script makes the Camera follow a specific object (usually the Player).";
-	private string warning = "WARNING: No object is selected, so the Camera will not move.";
-	private string requiresCamera = "This script requires a Camera component to work. Add it to the Camera GameObject.";
+	//private string explanation = "This script makes the Camera follow a specific object (usually the Player).";
+    private string explanation = "カメラに、指定したターゲットを追従させる。（主に Player を指定する）";
+    //private string warning = "WARNING: No object is selected, so the Camera will not move.";
+    private string warning = "ターゲットが指定されていません。";
+    //private string requiresCamera = "This script requires a Camera component to work. Add it to the Camera GameObject.";
+    private string requiresCamera = "Camera のオブジェクトに対してこのコンポーネントを追加しないと、この機能は正しく動きません。";
 
     private string undoLimitBoundsMessage = "Change bounds";
 

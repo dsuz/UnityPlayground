@@ -6,9 +6,10 @@ using UnityEditor;
 [CustomEditor(typeof(FollowTarget))]
 public class FollowTargetInspector : InspectorBase
 {
-	private string explanation = "This GameObject will pursue a target constantly.";
+    //private string explanation = "This GameObject will pursue a target constantly.";
+    private string explanation = "オブジェクトにターゲットを追跡させる。";
 
-	public override void OnInspectorGUI()
+    public override void OnInspectorGUI()
 	{
 		GUILayout.Space(10);
 		EditorGUILayout.HelpBox(explanation, MessageType.Info);
@@ -31,5 +32,7 @@ public class FollowTargetInspector : InspectorBase
 		{
 			serializedObject.ApplyModifiedProperties();
 		}
+
+		//base.OnInspectorGUI();
 	}
 }

@@ -93,14 +93,20 @@ public static class Utils
 	{
 #if UNITY_EDITOR
 		//Check first if a Collider2D is already present
+		//Collider2D が既に追加されているか確認する
 		if(gameObjectRef.GetComponent<Collider2D>() != null)
 		{
 			return;
 		}
 
 		//If not, popup a window offering a choice		
-        int option = UnityEditor.EditorUtility.DisplayDialogComplex("Collider2D needed",
-                "This script requires a Collider2D to work. Which shape do you want it to be?\n\nIf you are not sure, choose Polygon.",
+		//もし追加されていない場合は、ウインドウを表示してコライダーを選ばせる
+		//string title = "Collider2D needed";
+		//string message = "This script requires a Collider2D to work. Which shape do you want it to be?\n\nIf you are not sure, choose Polygon.";
+        string title = "Collider2D が必要です";
+        string message = "このコンポーネントを使うには、Collider2D が必要です。どの形のコライダーが必要ですか？\n\n不明な場合は、Polygon を選んで下さい。";
+        int option = UnityEditor.EditorUtility.DisplayDialogComplex(title,
+                message,
                 "Polygon",
                 "Circle",
                 "Rectangle");
@@ -124,7 +130,9 @@ public static class Utils
                 break;
 
             default:
-                Debug.LogWarning("Please add a Collider2D of any type or the script will not work as expected.");
+				//message = "Please add a Collider2D of any type or the script will not work as expected.";
+				message = "Collider2D がないと、このコンポーネントは正しく動きません。いずれかの Collider2D を追加して下さい。";
+                Debug.LogWarning(message);
                 break;
         }
 #endif

@@ -8,6 +8,7 @@ public class BulletAttribute : MonoBehaviour
 	public int playerId;
 
 	//This will create a dialog window asking for which dialog to add
+	//Collder2D の形を選ばせるダイアログを表示する
 	private void Reset()
 	{
 		Utils.Collider2DDialogWindow(this.gameObject, true);

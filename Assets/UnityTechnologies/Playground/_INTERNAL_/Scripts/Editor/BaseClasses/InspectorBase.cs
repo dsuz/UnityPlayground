@@ -6,12 +6,16 @@ public class InspectorBase : Editor
 {
 	private SerializedProperty prop;
 
-	private string prefabNotSceneHint = "Select a Prefab from Project panel, not an object in the Hierarchy!";
-	private string selectPrefabHint = "No Prefab selected!";
-	private string colliderWarning = "Disable \"Is Trigger\" on the Collider to make this script work!";
-	private string triggerWarning = "Enable \"Is Trigger\" on the Collider to make this script work!";
+	//private string prefabNotSceneHint = "Select a Prefab from Project panel, not an object in the Hierarchy!";
+    private string prefabNotSceneHint = "Prefab は Project ウインドウから選んでください。\nHierarchy から選んではいけません。";
+    //private string selectPrefabHint = "No Prefab selected!";
+    private string selectPrefabHint = "Prefab が指定されていません。";
+    //private string colliderWarning = "Disable \"Is Trigger\" on the Collider to make this script work!";
+    private string colliderWarning = "Collider の Is Trigger のチェックを外して下さい。";
+    //private string triggerWarning = "Enable \"Is Trigger\" on the Collider to make this script work!";
+    private string triggerWarning = "Collider の Is Trigger をチェックして下さい。";
 
-	private int preWarningSpace = 5;
+    private int preWarningSpace = 5;
 
 	// Draws the regular Inspector with all the properties, but minus the Script field, for more clarity
 	public void DrawDefaultInspectorMinusScript()

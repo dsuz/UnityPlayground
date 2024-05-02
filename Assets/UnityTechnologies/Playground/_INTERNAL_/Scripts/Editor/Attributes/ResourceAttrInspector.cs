@@ -6,8 +6,9 @@ using UnityEditor;
 [CustomEditor(typeof(ResourceAttribute))]
 public class ResourceAttrInspector : InspectorBase
 {
-	private string explanation = "When the Player touches this object, they will collect the specified amount of this type of resource.";
-	private InventoryResources repository;
+    //private string explanation = "When the Player touches this object, they will collect the specified amount of this type of resource.";
+    private string explanation = "Player タグが指定された オブジェクトが このオブジェクトに接触すると、 プレイヤーは指定された数だけ、 指定されたタイプのリソースを獲得する。";
+    private InventoryResources repository;
 
 	private void OnEnable()
 	{

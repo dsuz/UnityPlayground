@@ -6,10 +6,12 @@ using UnityEditor;
 [CustomEditor(typeof(Move))]
 public class MoveInspector : InspectorBase
 {
-	private string explanation = "The GameObject moves when pressing specific keys. Choose between Arrows or WASD.";
-	private string constraintsReminder = "If you want, you can constrain movement on the X/Y axes in the Rigidbody2D's properties.";
+    //private string explanation = "The GameObject moves when pressing specific keys. Choose between Arrows or WASD.";
+    private string explanation = "指定したキーを押したときにオブジェクトを動かす。動かすためのキーはカーソル（矢印）キーまたは WASD を選べる。";
+    //private string constraintsReminder = "If you want, you can constrain movement on the X/Y axes in the Rigidbody2D's properties.";
+    private string constraintsReminder = "Rigidbody2D の Constraints を使って X/Y 軸への移動を制限しても、オブジェクトの動く方向を制限することができる。";
 
-	public override void OnInspectorGUI()
+    public override void OnInspectorGUI()
 	{
 		GUILayout.Space(10);
 		EditorGUILayout.HelpBox(explanation, MessageType.Info);

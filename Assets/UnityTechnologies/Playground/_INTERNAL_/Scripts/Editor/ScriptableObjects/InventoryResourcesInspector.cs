@@ -7,8 +7,9 @@ using UnityEditorInternal;
 [CustomEditor(typeof(InventoryResources))]
 public class InventoryResourcesInspector : Editor
 {
-	private string explanation = "This is the list of Resources present in the game. Add and/or remove names here first, then go back to your Resource GameObjects and assign them a type.";
-	private ReorderableList list;
+    //private string explanation = "This is the list of Resources present in the game. Add and/or remove names here first, then go back to your Resource GameObjects and assign them a type.";
+    private string explanation = "以下のタイプのリソースが指定できる。\nリソースタイプを追加・削除した後に、Resource コンポーネントを 追加したオブジェクトに 対してそれらのタイプを指定できる。";
+    private ReorderableList list;
 
 	protected void OnEnable()
 	{

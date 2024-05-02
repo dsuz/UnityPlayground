@@ -6,11 +6,13 @@ using UnityEditor;
 [CustomEditor(typeof(Jump))]
 public class JumpInspector : InspectorBase
 {
-	private string explanation = "Makes the GameObject jump at the press of a button.";
-	private bool checkGround;
-	private string checkGroundTip = "Enable ground check to restrict the Player from jumping while in the air.";
+	//private string explanation = "Makes the GameObject jump at the press of a button.";
+    private string explanation = "指定したボタンを押した時に、オブジェクトをジャンプさせる。";
+    private bool checkGround;
+    //private string checkGroundTip = "Enable ground check to restrict the Player from jumping while in the air.";
+    private string checkGroundTip = "Check ground にチェックを入れると、地面の上に立っている時だけジャンプします。";
 
-	public override void OnInspectorGUI()
+    public override void OnInspectorGUI()
 	{
 		GUILayout.Space(10);
 		EditorGUILayout.HelpBox(explanation, MessageType.Info);
