@@ -12,31 +12,31 @@ public class MoveInspector : InspectorBase
     private string constraintsReminder = "Rigidbody2D の Constraints を使って X/Y 軸への移動を制限しても、オブジェクトの動く方向を制限することができる。";
 
     public override void OnInspectorGUI()
-	{
-		GUILayout.Space(10);
-		EditorGUILayout.HelpBox(explanation, MessageType.Info);
+    {
+        GUILayout.Space(10);
+        EditorGUILayout.HelpBox(explanation, MessageType.Info);
 
-		//base.OnInspectorGUI();
-		EditorGUILayout.PropertyField(serializedObject.FindProperty("typeOfControl"));
+        //base.OnInspectorGUI();
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("typeOfControl"));
 
-		EditorGUILayout.PropertyField(serializedObject.FindProperty("speed"));
-		EditorGUILayout.PropertyField(serializedObject.FindProperty("movementType"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("speed"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("movementType"));
 
-		GUILayout.Space(5);
-		GUILayout.Label("Orientation", EditorStyles.boldLabel);
-		bool orientToDirectionTemp = EditorGUILayout.Toggle("Orient to direction", serializedObject.FindProperty("orientToDirection").boolValue);
-		if(orientToDirectionTemp)
-		{
-			EditorGUILayout.PropertyField(serializedObject.FindProperty("lookAxis"));
-		}
-		serializedObject.FindProperty("orientToDirection").boolValue = orientToDirectionTemp;
+        GUILayout.Space(5);
+        GUILayout.Label("Orientation", EditorStyles.boldLabel);
+        bool orientToDirectionTemp = EditorGUILayout.Toggle("Orient to direction", serializedObject.FindProperty("orientToDirection").boolValue);
+        if (orientToDirectionTemp)
+        {
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("lookAxis"));
+        }
+        serializedObject.FindProperty("orientToDirection").boolValue = orientToDirectionTemp;
 
 
-		if(serializedObject.FindProperty("movementType").intValue != 0)
-		{
-			EditorGUILayout.HelpBox(constraintsReminder, MessageType.Info);
-		}
+        if (serializedObject.FindProperty("movementType").intValue != 0)
+        {
+            EditorGUILayout.HelpBox(constraintsReminder, MessageType.Info);
+        }
 
-		serializedObject.ApplyModifiedProperties();
-	}
+        serializedObject.ApplyModifiedProperties();
+    }
 }

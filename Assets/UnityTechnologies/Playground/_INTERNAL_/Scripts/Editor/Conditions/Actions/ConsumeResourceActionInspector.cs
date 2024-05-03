@@ -6,42 +6,43 @@ using UnityEditor;
 [CustomEditor(typeof(ConsumeResourceAction))]
 public class ConsumeResourceActionInspector : ConditionInspectorBase
 {
-	private string explanation = "Use this script to check if the player has enough of a specific resource. If they have it, it will be removed from the Player's inventory.";
-	private InventoryResources repository;
+    //private string explanation = "Use this script to check if the player has enough of a specific resource. If they have it, it will be removed from the Player's inventory.";
+    private string explanation = "プレイヤーが指定したリソース（アイテム）を必要なだけ持っているかチェックする。もし持っていた場合は、そのアイテムはプレイヤーの持ち物 (Inventory) から取り除かれる。";
+    private InventoryResources repository;
 
-	private new void OnEnable()
-	{
-		repository = Resources.Load<InventoryResources>("ScriptableObjects/InventoryResources");
+    private new void OnEnable()
+    {
+        repository = Resources.Load<InventoryResources>("ScriptableObjects/InventoryResources");
 
-		base.OnEnable();
-	}
+        base.OnEnable();
+    }
 
-	public override void OnInspectorGUI()
-	{
-		GUILayout.Space(10);
-		EditorGUILayout.HelpBox(explanation, MessageType.Info);
+    public override void OnInspectorGUI()
+    {
+        GUILayout.Space(10);
+        EditorGUILayout.HelpBox(explanation, MessageType.Info);
 
-		GUILayout.Space(10);
-		//draw the popup that displays the names of Resource types, taken from the "InventoryResources" ScriptableObject
-		SerializedProperty resourceIndexProp = serializedObject.FindProperty("checkFor");
-		int chosenType = resourceIndexProp.intValue; //take the int value from the property
-		
-		EditorGUILayout.BeginHorizontal();
-		EditorGUILayout.PrefixLabel("Type of Resource");
-		chosenType = EditorGUILayout.Popup(chosenType, repository.GetResourceTypes(), GUILayout.ExpandWidth(false));
-		EditorGUILayout.EndHorizontal();
+        GUILayout.Space(10);
+        //draw the popup that displays the names of Resource types, taken from the "InventoryResources" ScriptableObject
+        SerializedProperty resourceIndexProp = serializedObject.FindProperty("checkFor");
+        int chosenType = resourceIndexProp.intValue; //take the int value from the property
 
-		resourceIndexProp.intValue = chosenType; //put the value back into the property
+        EditorGUILayout.BeginHorizontal();
+        EditorGUILayout.PrefixLabel("Type of Resource");
+        chosenType = EditorGUILayout.Popup(chosenType, repository.GetResourceTypes(), GUILayout.ExpandWidth(false));
+        EditorGUILayout.EndHorizontal();
 
-		EditorGUILayout.PropertyField(serializedObject.FindProperty("amountNeeded"));
+        resourceIndexProp.intValue = chosenType; //put the value back into the property
 
-		GUILayout.Space(10);
-		//Display a button to jump to the "InventoryResources" ScriptableObject
-		if(GUILayout.Button("Add/Remove types"))
-		{
-			Selection.activeObject = repository;
-		}
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("amountNeeded"));
 
-		serializedObject.ApplyModifiedProperties();
-	}
+        GUILayout.Space(10);
+        //Display a button to jump to the "InventoryResources" ScriptableObject
+        if (GUILayout.Button("Add/Remove types"))
+        {
+            Selection.activeObject = repository;
+        }
+
+        serializedObject.ApplyModifiedProperties();
+    }
 }

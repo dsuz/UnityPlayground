@@ -11,31 +11,33 @@ public class InventoryResourcesInspector : Editor
     private string explanation = "以下のタイプのリソースが指定できる。\nリソースタイプを追加・削除した後に、Resource コンポーネントを 追加したオブジェクトに 対してそれらのタイプを指定できる。";
     private ReorderableList list;
 
-	protected void OnEnable()
-	{
-		list = new ReorderableList(serializedObject, serializedObject.FindProperty("resourcesTypes"), false, true, true, true);
+    protected void OnEnable()
+    {
+        list = new ReorderableList(serializedObject, serializedObject.FindProperty("resourcesTypes"), false, true, true, true);
 
-		//called for every element that has to be drawn in the ReorderableList
-		list.drawElementCallback =  (Rect rect, int index, bool isActive, bool isFocused) => {
-			SerializedProperty element = list.serializedProperty.GetArrayElementAtIndex(index);
-			rect.y += 2;
-			Rect r = new Rect(rect.x, rect.y, rect.width - 20, EditorGUIUtility.singleLineHeight);
-			EditorGUI.PropertyField(r, element, GUIContent.none, false);
-		};
+        //called for every element that has to be drawn in the ReorderableList
+        list.drawElementCallback = (Rect rect, int index, bool isActive, bool isFocused) =>
+        {
+            SerializedProperty element = list.serializedProperty.GetArrayElementAtIndex(index);
+            rect.y += 2;
+            Rect r = new Rect(rect.x, rect.y, rect.width - 20, EditorGUIUtility.singleLineHeight);
+            EditorGUI.PropertyField(r, element, GUIContent.none, false);
+        };
 
-		list.drawHeaderCallback = (Rect rect) => {
-			EditorGUI.LabelField(rect, "Resource types");
-		};
-	}
+        list.drawHeaderCallback = (Rect rect) =>
+        {
+            EditorGUI.LabelField(rect, "Resource types");
+        };
+    }
 
-	public override void OnInspectorGUI()
-	{
-		GUILayout.Space(10);
-		EditorGUILayout.HelpBox(explanation, MessageType.Info);
+    public override void OnInspectorGUI()
+    {
+        GUILayout.Space(10);
+        EditorGUILayout.HelpBox(explanation, MessageType.Info);
 
-		list.DoLayoutList();
-		
-		serializedObject.ApplyModifiedProperties();
-	}
+        list.DoLayoutList();
+
+        serializedObject.ApplyModifiedProperties();
+    }
 }
 

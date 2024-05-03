@@ -10,10 +10,10 @@ public class RotateInspector : InspectorBase
     private string explanation = "カーソルキー（矢印キー）の左右、または AD キーを押した時にオブジェクトを回転させる。";
 
     public override void OnInspectorGUI()
-	{
-		GUILayout.Space(10);
-		EditorGUILayout.HelpBox(explanation, MessageType.Info);
+    {
+        GUILayout.Space(10);
+        EditorGUILayout.HelpBox(explanation, MessageType.Info);
 
-		base.OnInspectorGUI();
-	}
+        base.OnInspectorGUI();
+    }
 }

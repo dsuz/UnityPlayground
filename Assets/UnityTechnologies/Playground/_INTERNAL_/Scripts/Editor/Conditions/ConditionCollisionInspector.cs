@@ -6,29 +6,30 @@ using UnityEditor;
 [CustomEditor(typeof(ConditionCollision))]
 public class ConditionCollisionInspector : ConditionInspectorBase
 {
-	private string explanation = "Use this script to perform an action when this GameObject collides with another.";
+    //private string explanation = "Use this script to perform an action when this GameObject collides with another.";
+    private string explanation = "このオブジェクトが何かと衝突した時に、指定した Action を実行する。";
 
-	public override void OnInspectorGUI()
-	{
-		serializedObject.Update();
+    public override void OnInspectorGUI()
+    {
+        serializedObject.Update();
 
-		chosenTag = serializedObject.FindProperty("filterTag").stringValue;
+        chosenTag = serializedObject.FindProperty("filterTag").stringValue;
 
-		GUILayout.Space(10);
-		EditorGUILayout.HelpBox(explanation, MessageType.Info);
+        GUILayout.Space(10);
+        EditorGUILayout.HelpBox(explanation, MessageType.Info);
 
-		GUILayout.Space(10);
-		DrawTagsGroup();
+        GUILayout.Space(10);
+        DrawTagsGroup();
 
-		GUILayout.Space(10);
-		DrawActionLists();
+        GUILayout.Space(10);
+        DrawActionLists();
 
-		CheckIfTrigger(false);
+        CheckIfTrigger(false);
 
-		if (GUI.changed)
-		{
-			serializedObject.FindProperty("filterTag").stringValue = chosenTag;
-			serializedObject.ApplyModifiedProperties();
-		}
-	}
+        if (GUI.changed)
+        {
+            serializedObject.FindProperty("filterTag").stringValue = chosenTag;
+            serializedObject.ApplyModifiedProperties();
+        }
+    }
 }

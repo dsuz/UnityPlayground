@@ -10,10 +10,10 @@ public class DestroyForPointsAttrInspector : InspectorBase
     private string explanation = "このオブジェクトが破棄されると、プレイヤーに得点が入る。";
 
     public override void OnInspectorGUI()
-	{
-		GUILayout.Space(10);
-		EditorGUILayout.HelpBox(explanation, MessageType.Info);
+    {
+        GUILayout.Space(10);
+        EditorGUILayout.HelpBox(explanation, MessageType.Info);
 
-		base.OnInspectorGUI();
-	}
+        base.OnInspectorGUI();
+    }
 }

@@ -10,9 +10,9 @@ public class BulletAttrInspector : InspectorBase
     private string explanation = "このオブジェクトが他の DestroyForPoints コンポーネントを追加した\nオブジェクトに接触すると、プレイヤーに点が入る。";
 
     public override void OnInspectorGUI()
-	{
-		GUILayout.Space(10);
-		EditorGUILayout.HelpBox(explanation, MessageType.Info);
+    {
+        GUILayout.Space(10);
+        EditorGUILayout.HelpBox(explanation, MessageType.Info);
         base.OnInspectorGUI();
     }
 }

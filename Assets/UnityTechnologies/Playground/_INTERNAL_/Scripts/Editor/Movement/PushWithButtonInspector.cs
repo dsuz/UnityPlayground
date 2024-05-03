@@ -14,19 +14,19 @@ public class PushInspector : InspectorBase
     private string relativeTip = "オブジェクトを基準とした相対座標系の方向に押す。";
 
     public override void OnInspectorGUI()
-	{
-		GUILayout.Space(10);
-		EditorGUILayout.HelpBox(explanation, MessageType.Info);
+    {
+        GUILayout.Space(10);
+        EditorGUILayout.HelpBox(explanation, MessageType.Info);
 
-		base.OnInspectorGUI();
+        base.OnInspectorGUI();
 
-		if(serializedObject.FindProperty("relativeAxis").boolValue)
-		{
-			EditorGUILayout.HelpBox(relativeTip, MessageType.Info);
-		}
-		else
-		{
-			EditorGUILayout.HelpBox(absoluteTip, MessageType.Info);
-		}
-	}
+        if (serializedObject.FindProperty("relativeAxis").boolValue)
+        {
+            EditorGUILayout.HelpBox(relativeTip, MessageType.Info);
+        }
+        else
+        {
+            EditorGUILayout.HelpBox(absoluteTip, MessageType.Info);
+        }
+    }
 }

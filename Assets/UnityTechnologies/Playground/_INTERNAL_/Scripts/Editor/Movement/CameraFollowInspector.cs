@@ -6,7 +6,7 @@ using UnityEditor;
 [CustomEditor(typeof(CameraFollow))]
 public class CameraFollowInspector : InspectorBase
 {
-	//private string explanation = "This script makes the Camera follow a specific object (usually the Player).";
+    //private string explanation = "This script makes the Camera follow a specific object (usually the Player).";
     private string explanation = "カメラに、指定したターゲットを追従させる。（主に Player を指定する）";
     //private string warning = "WARNING: No object is selected, so the Camera will not move.";
     private string warning = "ターゲットが指定されていません。";
@@ -15,38 +15,39 @@ public class CameraFollowInspector : InspectorBase
 
     private string undoLimitBoundsMessage = "Change bounds";
 
-	private GameObject go;
+    private GameObject go;
 
-	private void OnEnable()
-	{
-		go = (target as CameraFollow).gameObject;
-	}
+    private void OnEnable()
+    {
+        go = (target as CameraFollow).gameObject;
+    }
 
-	public override void OnInspectorGUI()
-	{
-		GUILayout.Space(10);
-		EditorGUILayout.HelpBox(explanation, MessageType.Info);
+    public override void OnInspectorGUI()
+    {
+        GUILayout.Space(10);
+        EditorGUILayout.HelpBox(explanation, MessageType.Info);
 
-		//search for a Camera component
-		Camera cam = go.GetComponent<Camera>();
-		if(cam == null)
-		{
-			//display a warning and a button to fix it
-			EditorGUILayout.HelpBox(requiresCamera, MessageType.Error);
-		}
-		else
-		{
+        //search for a Camera component
+        Camera cam = go.GetComponent<Camera>();
+        if (cam == null)
+        {
+            //display a warning and a button to fix it
+            EditorGUILayout.HelpBox(requiresCamera, MessageType.Error);
+        }
+        else
+        {
             EditorGUILayout.PropertyField(serializedObject.FindProperty("target"));
 
             if (!CheckIfAssigned("target", false))
-			{
-				EditorGUILayout.HelpBox(warning, MessageType.Warning);
-			}
+            {
+                EditorGUILayout.HelpBox(warning, MessageType.Warning);
+            }
 
             GUILayout.Space(5);
             GUILayout.Label("Limits", EditorStyles.boldLabel);
             bool allowLimitBoundsTemp = EditorGUILayout.Toggle("Use Bounds", serializedObject.FindProperty("limitBounds").boolValue);
-            if (allowLimitBoundsTemp) {
+            if (allowLimitBoundsTemp)
+            {
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("left"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("right"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("bottom"));
@@ -56,14 +57,16 @@ public class CameraFollowInspector : InspectorBase
 
             serializedObject.ApplyModifiedProperties();
         }
-	}
+    }
 
-    private void OnSceneGUI() {
+    private void OnSceneGUI()
+    {
         CameraFollow followScript = target as CameraFollow;
         if (null == followScript) return;
 
         Handles.color = Color.yellow;
-        if (followScript.limitBounds) {
+        if (followScript.limitBounds)
+        {
             Vector3[] verts = new Vector3[4];
             verts[0] = new Vector3(followScript.left, followScript.bottom, 0f);
             verts[1] = new Vector3(followScript.right, followScript.bottom, 0f);
@@ -79,7 +82,8 @@ public class CameraFollowInspector : InspectorBase
             //Dot bottom left
             EditorGUI.BeginChangeCheck();
             Vector3 tmpBottomLeft = Handles.FreeMoveHandle(verts[0], handleSize, handleSnap, handleCapFunction);
-            if (EditorGUI.EndChangeCheck()) {
+            if (EditorGUI.EndChangeCheck())
+            {
                 Undo.RecordObject(followScript, undoLimitBoundsMessage);
                 followScript.left = tmpBottomLeft.x;
                 followScript.bottom = tmpBottomLeft.y;
@@ -88,7 +92,8 @@ public class CameraFollowInspector : InspectorBase
             //Dot bottom right
             EditorGUI.BeginChangeCheck();
             Vector3 tmpBottomRight = Handles.FreeMoveHandle(verts[1], handleSize, handleSnap, handleCapFunction);
-            if (EditorGUI.EndChangeCheck()) {
+            if (EditorGUI.EndChangeCheck())
+            {
                 Undo.RecordObject(followScript, undoLimitBoundsMessage);
                 followScript.right = tmpBottomRight.x;
                 followScript.bottom = tmpBottomRight.y;
@@ -97,7 +102,8 @@ public class CameraFollowInspector : InspectorBase
             //Dot top right
             EditorGUI.BeginChangeCheck();
             Vector3 tmpTopRight = Handles.FreeMoveHandle(verts[2], handleSize, handleSnap, handleCapFunction);
-            if (EditorGUI.EndChangeCheck()) {
+            if (EditorGUI.EndChangeCheck())
+            {
                 Undo.RecordObject(followScript, undoLimitBoundsMessage);
                 followScript.right = tmpTopRight.x;
                 followScript.top = tmpTopRight.y;
@@ -106,7 +112,8 @@ public class CameraFollowInspector : InspectorBase
             //Dot top left
             EditorGUI.BeginChangeCheck();
             Vector3 tmpTopLeft = Handles.FreeMoveHandle(verts[3], handleSize, handleSnap, handleCapFunction);
-            if (EditorGUI.EndChangeCheck()) {
+            if (EditorGUI.EndChangeCheck())
+            {
                 Undo.RecordObject(followScript, undoLimitBoundsMessage);
                 followScript.left = tmpTopLeft.x;
                 followScript.top = tmpTopLeft.y;
