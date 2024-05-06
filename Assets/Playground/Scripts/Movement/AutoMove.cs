@@ -11,7 +11,7 @@ public class AutoMove : Physics2DObject
     public Vector2 direction = new Vector2(1f, 0f);
 
     //is the push relative or absolute to the world?
-    // 絶対座標系の方向に押すか、相対座標系の方向に押すかを決定する
+    // グローバル座標系の方向に押すか、ローカル座標系の方向に押すかを決定する
     public bool relativeToRotation = true;
 
     // FixedUpdate is called once per frame
