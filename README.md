@@ -63,11 +63,10 @@ Unity 2022.3 以降
   - Changed from Gamma to Linear color space due to SRGB textures
 
 - **1.4**
-
   - Updated to 2021.3
-
+  
   - Asset includes 3rd party component Varela Font under included OFL 1.1 license.
-
+  
 - **1.3**
   - Updated to 2019.4
 
