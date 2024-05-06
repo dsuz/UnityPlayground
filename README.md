@@ -45,26 +45,18 @@ Unity 2022.3 以降
   - v1.1 でディレクトリ構造が深くなっていたのを、シンプルに戻した
 
 - **1.6**
-
   - Made compatible with URP
-
   - [Updated Github branch](https://github.com/Unity-Technologies/UnityPlayground)
-
   - Fixed dropdown bug in inspector
-
   - Fixed wording for movement inputs in inspector
 
 - **1.5**
-
   - Updated to 2022.2
-
   - Varela Font removed for simplicity.
-
   - Changed from Gamma to Linear color space due to SRGB textures
 
 - **1.4**
   - Updated to 2021.3
-  
   - Asset includes 3rd party component Varela Font under included OFL 1.1 license.
   
 - **1.3**
