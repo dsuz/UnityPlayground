@@ -2,6 +2,7 @@
 using System.Collections;
 
 [AddComponentMenu("Playground/Movement/Camera Follow")]
+[HelpURL("https://bit.ly/3WGVDhh")]
 public class CameraFollow : MonoBehaviour
 {
     [Header("Object to follow")]

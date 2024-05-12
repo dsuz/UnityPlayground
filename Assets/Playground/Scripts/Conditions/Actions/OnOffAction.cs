@@ -2,6 +2,7 @@
 using System.Collections;
 
 [AddComponentMenu("Playground/Actions/On-Off")]
+[HelpURL("https://bit.ly/3yq75Uj")]
 public class OnOffAction : Action
 {
     public GameObject objectToAffect;

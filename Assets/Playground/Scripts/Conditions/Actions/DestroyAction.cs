@@ -2,6 +2,7 @@
 using System.Collections;
 
 [AddComponentMenu("Playground/Actions/Destroy Action")]
+[HelpURL("https://bit.ly/3wm54br")]
 public class DestroyAction : Action
 {
 	//who gets destroyed in the collision?

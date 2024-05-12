@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 [AddComponentMenu("Playground/Actions/Load Level")]
+[HelpURL("https://bit.ly/3yoCerb")]
 public class LoadLevelAction : Action
 {
     public string levelName = SAME_SCENE;

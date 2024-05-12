@@ -2,6 +2,7 @@
 using System.Collections;
 
 [AddComponentMenu("Playground/Movement/Jump")]
+[HelpURL("https://bit.ly/4bDhnz3")]
 [RequireComponent(typeof(Rigidbody2D))]
 public class Jump : Physics2DObject
 {

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
 [AddComponentMenu("Playground/Gameplay/Pick Up And Hold")]
+[HelpURL("https://bit.ly/3K46avj")]
 public class PickUpAndHold : MonoBehaviour
 {
     //pickup key and drop key could be the same

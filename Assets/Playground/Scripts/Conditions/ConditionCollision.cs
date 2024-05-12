@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.Events;
 
 [AddComponentMenu("Playground/Conditions/Condition Collision")]
+[HelpURL("https://bit.ly/44GamuI")]
 [RequireComponent(typeof(Collider2D))]
 public class ConditionCollision : ConditionBase
 {

@@ -2,6 +2,7 @@
 using System.Collections;
 
 [AddComponentMenu("Playground/Attributes/Modify Health")]
+[HelpURL("https://bit.ly/3UXzIRU")]
 public class ModifyHealthAttribute : MonoBehaviour
 {
 

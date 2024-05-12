@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.Events;
 
 [AddComponentMenu("Playground/Actions/Consume Resource")]
+[HelpURL("https://bit.ly/3wHzO6y")]
 public class ConsumeResourceAction : Action
 {
     [Header("Resource")]

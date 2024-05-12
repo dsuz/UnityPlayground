@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [AddComponentMenu("Playground/Conditions/Condition Repeat")]
+[HelpURL("https://bit.ly/3UFU1Sx")]
 public class ConditionRepeat : ConditionBase
 {
     public float initialDelay = 0f;

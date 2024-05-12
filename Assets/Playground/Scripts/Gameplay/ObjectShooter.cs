@@ -2,6 +2,7 @@
 using System.Collections;
 
 [AddComponentMenu("Playground/Gameplay/Object Shooter")]
+[HelpURL("https://bit.ly/3KiurhH")]
 public class ObjectShooter : MonoBehaviour
 {
     [Header("Object creation")]

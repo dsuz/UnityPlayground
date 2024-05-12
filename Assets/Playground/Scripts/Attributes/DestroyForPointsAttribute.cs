@@ -2,6 +2,7 @@
 using System.Collections;
 
 [AddComponentMenu("Playground/Attributes/Destroy For Points")]
+[HelpURL("https://bit.ly/3UYBvWR")]
 public class DestroyForPointsAttribute : MonoBehaviour
 {
     public int pointsWorth = 1;

@@ -3,6 +3,7 @@ using System.Collections;
 
 //This script has been suggested by Bryan Livingston (@BryanLivingston). Thanks Bryan!
 [AddComponentMenu("Playground/Movement/Wander")]
+[HelpURL("https://bit.ly/3WDsdR7")]
 [RequireComponent(typeof(Rigidbody2D))]
 public class Wander : Physics2DObject
 {

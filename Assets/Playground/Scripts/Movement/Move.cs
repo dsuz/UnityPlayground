@@ -2,6 +2,7 @@
 using System.Collections;
 
 [AddComponentMenu("Playground/Movement/Move")]
+[HelpURL("https://bit.ly/4bD04y1")]
 [RequireComponent(typeof(Rigidbody2D))]
 public class Move : Physics2DObject
 {

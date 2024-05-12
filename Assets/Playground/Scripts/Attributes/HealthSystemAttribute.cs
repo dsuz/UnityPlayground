@@ -2,6 +2,7 @@
 using System.Collections;
 
 [AddComponentMenu("Playground/Attributes/Health System")]
+[HelpURL("https://bit.ly/3UC1fqy")]
 public class HealthSystemAttribute : MonoBehaviour
 {
     public int health = 3;

@@ -2,6 +2,7 @@
 using System.Collections;
 
 [AddComponentMenu("Playground/Actions/Create Object")]
+[HelpURL("https://bit.ly/3UvgRMg")]
 public class CreateObjectAction : Action
 {
     public GameObject prefabToCreate;

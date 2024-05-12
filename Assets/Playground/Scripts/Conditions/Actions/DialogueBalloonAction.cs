@@ -2,6 +2,7 @@
 using System.Collections;
 
 [AddComponentMenu("Playground/Actions/Dialogue Balloon")]
+[HelpURL("https://bit.ly/3wH5QzD")]
 public class DialogueBalloonAction : Action
 {
     [Header("Contents")]

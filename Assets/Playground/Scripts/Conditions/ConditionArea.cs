@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.Events;
 
 [AddComponentMenu("Playground/Conditions/Condition Area")]
+[HelpURL("https://bit.ly/44GDHFK")]
 public class ConditionArea : ConditionBase
 {
     // the amount of times (in seconds) that this Condition will call OnTriggerStay

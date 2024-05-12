@@ -2,6 +2,7 @@
 using System.Collections;
 
 [AddComponentMenu("Playground/Gameplay/Object Creator Area")]
+[HelpURL("https://bit.ly/3JYYYka")]
 [RequireComponent(typeof(BoxCollider2D))]
 public class ObjectCreatorArea : MonoBehaviour
 {

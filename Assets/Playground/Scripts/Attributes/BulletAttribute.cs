@@ -2,6 +2,7 @@
 using System.Collections;
 
 [AddComponentMenu("Playground/Attributes/Bullet")]
+[HelpURL("https://bit.ly/44Fuj4R")]
 public class BulletAttribute : MonoBehaviour
 {
     [HideInInspector]

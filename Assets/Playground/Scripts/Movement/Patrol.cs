@@ -2,6 +2,7 @@
 using System.Collections;
 
 [AddComponentMenu("Playground/Movement/Patrol")]
+[HelpURL("https://bit.ly/4bdUJ0e")]
 [RequireComponent(typeof(Rigidbody2D))]
 public class Patrol : Physics2DObject
 {

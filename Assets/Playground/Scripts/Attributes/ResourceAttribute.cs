@@ -2,6 +2,7 @@
 using System.Collections;
 
 [AddComponentMenu("Playground/Attributes/Resource")]
+[HelpURL("https://bit.ly/44UnPQ5")]
 [RequireComponent(typeof(SpriteRenderer))]
 public class ResourceAttribute : MonoBehaviour
 {

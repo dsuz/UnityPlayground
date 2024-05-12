@@ -2,6 +2,7 @@
 using System.Collections;
 
 [AddComponentMenu("Playground/Gameplay/Timed Self-Destruct")]
+[HelpURL("https://bit.ly/3wuPJVW")]
 public class TimedSelfDestruct : MonoBehaviour
 {
     // After this time, the object will be destroyed

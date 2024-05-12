@@ -2,6 +2,7 @@
 using System.Collections;
 
 [AddComponentMenu("Playground/Movement/Follow Target")]
+[HelpURL("https://bit.ly/4bxW81w")]
 [RequireComponent(typeof(Rigidbody2D))]
 public class FollowTarget : Physics2DObject
 {

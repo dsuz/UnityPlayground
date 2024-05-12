@@ -2,6 +2,7 @@
 using System.Collections;
 
 [AddComponentMenu("Playground/Actions/Teleport")]
+[HelpURL("https://bit.ly/3WDQned")]
 public class TeleportAction : Action
 {
     public GameObject objectToMove;
