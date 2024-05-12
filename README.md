@@ -34,6 +34,19 @@ Unity 2022.3 以降
 
 ### 変更履歴
 
+- **1.6.3**
+  - README.md にセットアップ動画へのリンクを追加した
+  
+  - Playground の各コンポーネントにリファレンスへのリンクを追加した
+  
+- **1.6.2**
+  - README.md を日本語に訳し、使い方などの情報を加えた
+
+  - Examples にキャッチゲームを追加した
+
+  - UserInterface プレハブの Vertex Color のオプションが警告が出る設定になっていたので、警告が出ない設定に変更した
+  - 相対/絶対座標系という表現を、ローカル/グローバル（ワールド）座標系という表現に改めた
+
 - **1.6.1**
   - プロジェクト設定により余計な Collider Bounds が見えているのを見えないようにした
   - v1.5 でフォントを削除したことに伴う、セリフやインベントリの表示不具合を修正した
@@ -59,7 +72,7 @@ Unity 2022.3 以降
 - **1.4**
   - Updated to 2021.3
   - Asset includes 3rd party component Varela Font under included OFL 1.1 license.
-  
+
 - **1.3**
   - Updated to 2019.4
 
