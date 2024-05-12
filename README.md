@@ -18,6 +18,7 @@
 
 ### 使い方
 
+- [Playground のセットアップ（動画）](https://www.youtube.com/watch?v=THIkRRrueHw&t=73s)
 - [Unity Playground を始める](http://bboydaisuke.wp.xdomain.jp/2021/04/25/playground/)
 - [Playground リファレンス ガイド 1](http://bboydaisuke.wp.xdomain.jp/2021/04/26/playground-reference-guide-1/)
 - [Playground リファレンス ガイド 2](http://bboydaisuke.wp.xdomain.jp/2021/04/26/playground-reference-guide-2/)
