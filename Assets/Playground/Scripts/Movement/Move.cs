@@ -29,12 +29,12 @@ public class Move : Physics2DObject
         // Moving with the arrow keys
         if (typeOfControl == Enums.KeyGroups.ArrowKeys)
         {
-            moveHorizontal = Input.GetAxisRaw("Horizontal");
+            moveHorizontal = Input.GetAxis("Horizontal");
             moveVertical = Input.GetAxis("Vertical");
         }
         else
         {
-            moveHorizontal = Input.GetAxisRaw("Horizontal2");
+            moveHorizontal = Input.GetAxis("Horizontal2");
             moveVertical = Input.GetAxis("Vertical2");
         }
 
@@ -71,7 +71,6 @@ public class Move : Physics2DObject
     {
         // Apply the force to the Rigidbody2d
         // Rigidbody2d に力を加える
-        //rigidbody2D.AddForce(movement * speed * 10f);
-        rigidbody2D.velocity = movement * speed;
+        rigidbody2D.AddForce(movement * speed * 10f);
     }
 }
