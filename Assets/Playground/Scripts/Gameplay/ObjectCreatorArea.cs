@@ -19,14 +19,18 @@ public class ObjectCreatorArea : MonoBehaviour
     // Configure the spawning pattern
     //生成する間隔（秒）を指定する
     public float spawnInterval = 1;
-
     private BoxCollider2D boxCollider2D;
+    private Coroutine spawnCoroutine;
 
-    void Start()
+    void OnEnable()
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
+        spawnCoroutine = StartCoroutine(SpawnObject());
+    }
 
-        StartCoroutine(SpawnObject());
+    void OnDisable()
+    {
+        StopCoroutine(spawnCoroutine);
     }
 
     // This will spawn an object, and then wait some time, then spawn another...
@@ -43,7 +47,8 @@ public class ObjectCreatorArea : MonoBehaviour
             // Generate the new object
             // オブジェクトを生成し、計算した座標に移動する
             GameObject newObject = Instantiate<GameObject>(prefabToSpawn);
-            newObject.transform.position = new Vector2(randomX + this.transform.position.x, randomY + this.transform.position.y);
+            newObject.transform.position
+                = new Vector2(randomX + this.transform.position.x + boxCollider2D.offset.x, randomY + this.transform.position.y + boxCollider2D.offset.y);
 
             // Wait for some time before spawning another object
             // 処理をループさせる前に待つ
