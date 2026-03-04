@@ -37,7 +37,7 @@ public class TeleportAction : Action
 #if UNITY_2022
             rb2D.velocity = Vector2.zero;
 #endif
-#if UNITY_6
+#if UNITY_2023_1_OR_NEWER
             rb2D.linearVelocity = Vector2.zero;
 #endif
             rb2D.angularVelocity = 0f;

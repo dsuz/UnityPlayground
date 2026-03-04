@@ -49,7 +49,7 @@ public class PickUpAndHold : MonoBehaviour
 #if UNITY_2022
             rb2d.velocity = Vector2.zero;
 #endif
-#if UNITY_6
+#if UNITY_2023_1_OR_NEWER
             rb2d.linearVelocity = Vector2.zero;
 #endif
         }
