@@ -33,40 +33,4 @@ Unity 2022.3 以降
 ノート PC 程度
 
 ### 変更履歴
-
-- **1.6.1**
-  - プロジェクト設定により余計な Collider Bounds が見えているのを見えないようにした
-  - v1.5 でフォントを削除したことに伴う、セリフやインベントリの表示不具合を修正した
-  - Playground 独自のインスペクタ表示をできないようにした
-  - 不要なパッケージをプロジェクトから削除し、Cinemachine パッケージを追加した
-  - コメントやメッセージに日本語訳を追加した
-  - ソースコードを C# として正しい形に成形した
-  - v1.6 で Render Pipeline が URP に変更されていたが、それを Built-in Render Pipeline に戻した
-  - いくつかのサンプルゲームを追加した
-  - v1.1 でディレクトリ構造が深くなっていたのを、シンプルに戻した
-
-- **1.6**
-  - Made compatible with URP
-  - [Updated Github branch](https://github.com/Unity-Technologies/UnityPlayground)
-  - Fixed dropdown bug in inspector
-  - Fixed wording for movement inputs in inspector
-
-- **1.5**
-  - Updated to 2022.2
-  - Varela Font removed for simplicity.
-  - Changed from Gamma to Linear color space due to SRGB textures
-
-- **1.4**
-  - Updated to 2021.3
-  - Asset includes 3rd party component Varela Font under included OFL 1.1 license.
-  
-- **1.3**
-  - Updated to 2019.4
-
-- **1.1** _(2023/05/24)_ 
-    - Upgraded to 2022.2
-    - Upgraded to Universal Render Pipeline
-    - Removed Varela Font and replaced by Built-in font
-    - Changed folders structure to match Asset Store requirements
-- **1.0** _(2018/12/12)_ 
-    - initial release on the Asset Store.
+[Releases](https://github.com/dsuz/UnityPlayground/releases) 参照
