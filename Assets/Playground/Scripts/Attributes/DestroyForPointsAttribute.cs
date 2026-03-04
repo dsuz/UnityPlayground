@@ -12,7 +12,7 @@ public class DestroyForPointsAttribute : MonoBehaviour
     private void Start()
     {
         // Find the UI in the scene and store a reference for later use
-        userInterface = GameObject.FindObjectOfType<UIScript>();
+        userInterface = FindFirstObjectByType<UIScript>();
     }
 
     //This will create a dialog window asking for which dialog to add

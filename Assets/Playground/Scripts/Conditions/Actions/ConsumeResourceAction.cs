@@ -15,7 +15,7 @@ public class ConsumeResourceAction : Action
     private void Start()
     {
         // Find the UI in the scene and store a reference for later use
-        userInterface = GameObject.FindObjectOfType<UIScript>();
+        userInterface = FindFirstObjectByType<UIScript>();
     }
 
     public override bool ExecuteAction(GameObject dataObject)
