@@ -46,7 +46,12 @@ public class PickUpAndHold : MonoBehaviour
         if (rb2d != null)
         {
             rb2d.bodyType = RigidbodyType2D.Dynamic;
+#if UNITY_2022
+            rb2d.velocity = Vector2.zero;
+#endif
+#if UNITY_6
             rb2d.linearVelocity = Vector2.zero;
+#endif
         }
         //unparenting
         // 親子関係を解除する

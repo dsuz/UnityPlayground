@@ -34,7 +34,12 @@ public class TeleportAction : Action
         //オブジェクトが Rigidbody2D コンポーネントを持っていて、StopMovement にチェックが入っている場合は、移動した後に動きを止める
         if (stopMovements && rb2D != null)
         {
-            rb2D.linearVelocity = Vector3.zero;
+#if UNITY_2022
+            rb2D.velocity = Vector2.zero;
+#endif
+#if UNITY_6
+            rb2D.linearVelocity = Vector2.zero;
+#endif
             rb2D.angularVelocity = 0f;
         }
 
